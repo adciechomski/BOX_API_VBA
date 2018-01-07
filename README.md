@@ -24,9 +24,14 @@ UploadFile2BOX(URL$, filePath$, contentType$, authorizationToken$, Optional fold
 
 call example:
 UploadFile2BOX("https://upload.box.com/api/2.0/files/content" _
+
     , "C:\binaryFile.xlsb" _
+    
     , "application/vnd.ms-excel.sheet.binary.macroenabled.12" _
+    
     , accessTokenDict.Item("access_token") _
+    
     , "0" _
+    
     , False)
 

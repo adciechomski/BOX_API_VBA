@@ -9,7 +9,9 @@ BOXAuth module is crucial to do all later calls, whereas BOXFileUpload module is
 Please, remmember to add appropierte references to your project: ScriptingRuntime, Microsoft HTTP Object Library, Microsoft Internet Controls
 
 Authentication function:
+```
 GetBoxAuthToken() as Dictionary
+```
 returns dictionary with following keys assigned to token string parameters:
 - access_token
 - expires_in
@@ -20,18 +22,16 @@ returns dictionary with following keys assigned to token string parameters:
 
 
 Upload file function:
+```
 UploadFile2BOX(URL$, filePath$, contentType$, authorizationToken$, Optional folderID$ = "0", Optional ByVal Async As Boolean) As String
+```
 
 call example:
+```
 UploadFile2BOX("https://upload.box.com/api/2.0/files/content" _
-
-    , "C:\binaryFile.xlsb" _
-    
-    , "application/vnd.ms-excel.sheet.binary.macroenabled.12" _
-    
-    , accessTokenDict.Item("access_token") _
-    
-    , "0" _
-    
+    , "C:\binaryFile.xlsb" _    
+    , "application/vnd.ms-excel.sheet.binary.macroenabled.12" _    
+    , accessTokenDict.Item("access_token") _    
+    , "0" _    
     , False)
-
+```
